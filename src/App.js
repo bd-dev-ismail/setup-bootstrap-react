@@ -1,8 +1,9 @@
 import './App.css';
+import CardGroup from './components/CardGroup/CardGroup';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App my-5">
       <div className="spinner-border text-danger" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>
@@ -34,6 +35,7 @@ function App() {
       <button type="button" className="btn btn-link">
         Link
       </button>
+      <CardGroup/>
     </div>
   );
 }
