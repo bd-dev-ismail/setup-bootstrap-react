@@ -1,41 +1,38 @@
+import Navbar from './components/Navbar/Navbar'
 import './App.css';
-import CardGroup from './components/CardGroup/CardGroup';
-
+import CardGroupF from './components/CardGroup/CardGroup';
 function App() {
-  return (
-    <div className="App my-5">
-      <div className="spinner-border text-danger" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
-      <button type="button" className="btn btn-primary">
-        Primary
-      </button>
-      <button type="button" className="btn btn-secondary">
-        Secondary
-      </button>
-      <button type="button" className="btn btn-success">
-        Success
-      </button>
-      <button type="button" className="btn btn-danger">
-        Danger
-      </button>
-      <button type="button" className="btn btn-warning">
-        Warning
-      </button>
-      <button type="button" className="btn btn-info">
-        Info
-      </button>
-      <button type="button" className="btn btn-light">
-        Light
-      </button>
-      <button type="button" className="btn btn-dark">
-        Dark
-      </button>
+     const hotness = [
+       {
+         id: 1,
+         name: "Mia Malkova",
+         size: 36,
+         image:
+           "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+       },
 
-      <button type="button" className="btn btn-link">
-        Link
-      </button>
-      <CardGroup/>
+       {
+         id: 2,
+         name: "Mia Khalifa",
+         size: 36,
+         image:
+           "https://images.unsplash.com/photo-1596217431227-472b0c00da7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+       },
+
+       {
+         id: 3,
+         name: "Arina John",
+         size: 34,
+         image:
+           "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+       },
+     ];
+  return (
+    <div className="App">
+      <Navbar/>
+      {
+        hotness.map(hot=> <CardGroupF hot={hot} key={hot.id}></CardGroupF>)
+      }
     </div>
   );
 }
